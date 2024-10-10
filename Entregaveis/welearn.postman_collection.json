@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "2a411e46-167d-459e-b1d3-4993748ecd79",
+		"name": "welearn",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31072962"
+	},
+	"item": [
+		{
+			"name": "Usuário",
+			"item": [
+				{
+					"name": "Cadastrar Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"nome\": \"Braz\",\n        \"email\": \"rm97768@fiap.com.br\",\n        \"senha\": \"12345678\",\n        \"telefone\": \"123456789\",\n        \"endereco\": \"Rua FIAP\",\n        \"cep\": \"023231231\",\n        \"cidade\": \"São Paulo\",\n        \"estado\": \"São Paulo\",\n        \"cpf\": \"54610446898\",\n        \"data_cadastro\": \"05/05/2024\",\n        \"data_nascimento\": \"27/03/2005\",\n        \"tipo_pagamento\": \"Débito\",\n        \"sexo\": \"Masculino\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuario",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Kauê\",\n    \"email\": \"kaueteste@fiap.com.br\",\n    \"senha\": \"$2a$10$b6YWYub356qDo/JnYTKrj.rSkrpGoJWO2DD5bWkAuOEYehp3F/V66\",\n    \"telefone\": \"123456789\",\n    \"endereco\": \"Rua FIap Paulista\",\n    \"cep\": \"023231231\",\n    \"cidade\": \"São Paulo\",\n    \"estado\": \"São Paulo\",\n    \"cpf\": \"54610446898\",\n    \"data_cadastro\": \"05/05/2024\",\n    \"data_nascimento\": \"27/03/2005\",\n    \"tipo_pagamento\": \"Débito\",\n    \"sexo\": \"Masculino\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuario/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/usuario/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categoria",
+			"item": [
+				{
+					"name": "Listar Categoria",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Categoria",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/categoria",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Categoria",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/categoria/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categoria",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Categoria",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/categoria/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categoria",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Curso",
+			"item": [
+				{
+					"name": "Listar Curso",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/curso",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"curso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Curso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/curso",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"curso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Curso",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/curso/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"curso",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Curso",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/curso",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"curso"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://welearnrm97768.brazilsouth.azurecontainer.io:8080/welearn-0.0.1-SNAPSHOT",
+			"type": "string"
+		}
+	]
+}

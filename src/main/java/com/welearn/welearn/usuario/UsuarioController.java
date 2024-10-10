@@ -1,7 +1,5 @@
 package com.welearn.welearn.usuario;
 
-import com.welearn.welearn.usuario.dto.UsuarioProfileResponse;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -50,13 +48,6 @@ public class UsuarioController {
     )
     public ResponseEntity<Usuario> getById(@PathVariable Long id) {
         return ResponseEntity.of(Optional.ofNullable(usuarioService.getById(id)));
-    }
-
-    @GetMapping("profile")
-    @Operation(summary = "Obter perfil do usuário pelo email")
-    public UsuarioProfileResponse getUserProfile(){
-        var email = SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString();
-        return usuarioService.getUserProfile(email);
     }
 
 
